@@ -36,10 +36,34 @@
         <li><code>-range 191-35-401 191-35-407 191-35-410 191-35-417</code> </li>
       </ol>
       </li>
-    <li>-together: this flag has no perameter. use this flag i you want to combine output in a file command: <code> python main.py -range 191-35-401 191-35-407 -sem 191 -together </code>. This command will retrive all the result of this range and add in a single file </li>
+    <li>-together: this flag has no perameter. use this flag i you want to combine output in a file command: <code> python main.py -range 191-35-401 191-35-407 -sem 191 -together </code>. This command will retrive all the result of this range and add in a single file <code>output.html</code>. If you don't use this flag. This script will create result of individual id's in a individual file. like <code>191-35-407.html 191-35-441.html</code> </li>
     <li><b> <i> Default output directory is Output inside the program directory</i> </b> </li>
     
   </ul>
 
   </li>
 </ol>
+
+# Some Example
+<ul>
+<li><p>retriving some ids result of all semester <code>python main.py -id 191-35-407 191-35-441 191-35-405 191-35-427 </code> . this will retrive all semester result of all those ids and create file <code> 191-35-407.html 191-35-441.html 191-35-405.html 191-35-427.html</code> </p></li>
+
+<li><p>retriving some ids result of spring 2019 semester <code>python main.py -id 191-35-407 191-35-441 191-35-405 191-35-427 -sem 191 </code> . this will retrive spring 2019 semester result of all those ids and create file <code> 191-35-407.html 191-35-441.html 191-35-405.html 191-35-427.html</code> </p></li>
+
+<li><p>retriving ranges result of spring 2019 semester <code>python main.py -range 191-35-405 191-35-407 -sem 191 </code> . this will retrive spring 2019 semester result of all those ids and create file <code> 191-35-405.html 191-35-406.html 191-35-407.html</code> </p></li>
+
+<li><p>retriving ranges result of spring 2019 semester and put in a single file <code>python main.py -range 191-35-401 191-35-441 -sem 191 -together </code> . this will retrive spring 2019 semester result of all id 401 to 441 including 401 and 441 and create a ouput file <code> output.html</code> </p></li>
+  
+  <li><p>retriving all id from a file and retrive result of spring 2019,summer 2019 fall 2019 and spring 2020  semester and put in a single file <code>python main.py -f allids.txt -sem 191 192 193 201 -together </code> . this will retrive spring 2019 semester result of all id 401 to 441 including 401 and 441 and create a ouput file <code> output.html</code> </p></li>
+  
+</ul>
+
+# Example of a File text
+<p><b>allids.txt</b></p>
+<code> 
+  <p>191-35-407</p>
+  <p>191-35-441</p>
+  <p>-range 191-35-401 191-35-406</p>
+  <p>-range 191-35-415 191-35-427</p>
+  <p>191-35-443</p>
+ </code>
