@@ -59,11 +59,10 @@
 </ul>
 
 # Example of a File text
-<p><b>allids.txt</b></p>
-<code> 
-  <p>191-35-407</p>
-  <p>191-35-441</p>
-  <p>-range 191-35-401 191-35-406</p>
-  <p>-range 191-35-415 191-35-427</p>
-  <p>191-35-443</p>
- </code>
+<p><b>allids.txt</b></p> 
+  <p><code>191-35-407</code></p> 
+  <p><code>191-35-441</code></p> 
+ <p><code>-range 191-35-401 191-35-406</code></p> 
+ <p><code>-range 191-35-415 191-35-427</code></p> 
+ <p><code>191-35-443</code></p> 
+
