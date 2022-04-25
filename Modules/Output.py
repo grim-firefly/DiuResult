@@ -253,7 +253,7 @@ class Output:
     # adding CGPA at the bottom
     def CgpaUi(self,credit,cgpa,FileName):
         try:
-            cgpaValue = cgpa / credit
+            cgpaValue = round(cgpa / credit,2)
         except:
             cgpaValue='Teaching Evaluation Pending'
 
