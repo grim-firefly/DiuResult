@@ -26,6 +26,7 @@ class UserCommand:
 	# if there is nothing in command
 	def CheckUse(self):
 		print('Usage: python main.py -h')
+		adsjfdfdsfsfsfsa = input("press close or anykey to exit")
 		sys.exit(1)
 # add all id from st to en
 	def AddRange(self,st:str,en:str):
@@ -74,6 +75,7 @@ class UserCommand:
 		print('				if you use this , all result will be shown in a single file')
 		print('N.B: Individual result will be use their id.html as file name and Together result will use output.html as the file name')
 		print('You can change together file name by passing file name as string in the Result("filename") in main.py .')
+		adsjfdfdsfsfsfsa = input("press close or anykey to exit")
 		sys.exit(1)
 
 

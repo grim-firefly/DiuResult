@@ -4,7 +4,7 @@ import sys
 
 class Output:
     def __init__(self,outputFolderName='Output'):
-        self.__outputFolder=outputFolderName+os.path.sep
+        self.CreateOutputFolder(outputFolderName)
         self.__header='''
         <!doctype html>
 <html lang="en">
@@ -104,6 +104,20 @@ class Output:
 </html>
 
         '''
+    # create output folder
+    def CreateOutputFolder(self,FolderName):
+        if os.path.isdir(FolderName):
+            self.__outputFolder=FolderName+os.path.sep
+        else:
+            try:
+                os.mkdir(FolderName)
+                self.__outputFolder=FolderName+os.path.sep
+                print('Output directory Created')
+            except:
+                print('Failed to create Output Directory')
+                adsjfdfdsfsfsfsa = input("press close or anykey to exit")
+
+                sys.exit(1)
 
     # ui for user name and some small details
     def userInfoCard(self,InfoList,FileName):
@@ -125,6 +139,8 @@ class Output:
                 f.write(UserCard)
         except:
             print("Error File Writing")
+            adsjfdfdsfsfsfsa = input("press close or anykey to exit")
+            sys.exit(1)
 
 
     # adding semester UI to the file
@@ -155,6 +171,8 @@ class Output:
                 f.write(semester)
         except:
             print("Error File Writing")
+            adsjfdfdsfsfsfsa = input("press close or anykey to exit")
+            sys.exit(1)
 
     # print if id is not valid
     def inValidInfoCard(self,id,FileName):
@@ -175,6 +193,8 @@ class Output:
                 f.write(UserCard)
         except:
             print("Error File Writing")
+            adsjfdfdsfsfsfsa = input("press close or anykey to exit")
+            sys.exit(1)
 # creating file with header
     def CreateFile(self,FileName):
         file=self.__outputFolder+FileName+'.html'
@@ -184,6 +204,7 @@ class Output:
                     f.write(self.__header)
             except:
                 print("failed to create file")
+                adsjfdfdsfsfsfsa = input("press close or anykey to exit")
                 sys.exit(1)
         else:
             flag=input(" This File is Already Exist! Do You want to Replace it (Y/N) ?\n= ")
@@ -193,9 +214,11 @@ class Output:
                         f.write(self.__header)
                 except:
                     print("failed to create file")
+                    adsjfdfdsfsfsfsa = input("press close or anykey to exit")
                     sys.exit(1)
             else:
                 print("File Location is : ", os.getcwd() + os.path.sep + self.__outputFolder)
+                adsjfdfdsfsfsfsa = input("press close or anykey to exit")
                 sys.exit(1)
 
 
@@ -209,6 +232,7 @@ class Output:
                     f.write(self.__footer)
             except:
                 print("failed to add Footer file")
+                adsjfdfdsfsfsfsa = input("press close or anykey to exit")
                 sys.exit(1)
 
     # output Result Row UI
@@ -229,6 +253,8 @@ class Output:
                 f.write(row)
         except:
             print("Error Row Writing")
+            adsjfdfdsfsfsfsa = input("press close or anykey to exit")
+            sys.exit(1)
     # writing sgpa in the table
     def TableSgpaUi(self,Credit,Sgpa,FileName):
         sgpa='''
@@ -248,6 +274,8 @@ class Output:
                 f.write(sgpa)
         except:
             print("Error Sgpa row Writing")
+            adsjfdfdsfsfsfsa = input("press close or anykey to exit")
+            sys.exit(1)
 
 
     # adding CGPA at the bottom
@@ -277,3 +305,5 @@ class Output:
                 f.write(cgpa)
         except:
             print("Error in CGPA Writing")
+            adsjfdfdsfsfsfsa = input("press close or anykey to exit")
+            sys.exit(1)
