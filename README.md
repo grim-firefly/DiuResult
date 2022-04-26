@@ -4,6 +4,7 @@
 <li><p> Download The released Exe File from <a href="https://github.com/grim-firefly/DiuResult/releases/tag/v1.0.0">Here </a> . that's it</P></li>
 <li><p>Double click on DiuResult.exe to run</P></li>
 </ol>
+<h2><a href="https://youtu.be/DfIhofuFsOo">Watch Installtion Process</a></h2>
 
 # For CommandLine Argument Use Go to Main Branch
 Main Branch : https://github.com/grim-firefly/DiuResult/tree/main
