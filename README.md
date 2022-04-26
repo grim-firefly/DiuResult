@@ -2,10 +2,11 @@
 <h1> Installation Process: </h1>
 <ol>
 <li><p> Download The released Exe File. that's it</P></li>
-<li><p>double click on DiuResult.exe to run</P></li>
+<li><p>Double click on DiuResult.exe to run</P></li>
 </ol>
 
-
+# For CommandLine Argument Use Go to Main Branch
+Main Branch : https://github.com/grim-firefly/DiuResult/tree/main
 # How it's Work
 <ol>
   <li>Open cmd inside project directory again and write <code> double click on DiuResult.exe </code>. This will explain common flags</li>
