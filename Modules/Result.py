@@ -77,6 +77,7 @@ class Result:
                 self.__Output.userInfoCard(studentinfo,fname)
 
             credit,cg=0.0,0.0
+            SomethigOuput=False
             for sem in semlist:
                 CurrentSemResult=self.Sgpa(i,sem)
                 if CurrentSemResult[0]==None:
@@ -87,15 +88,15 @@ class Result:
                 ThisSem=0
                 for res in CurrentSemResult:
                     self.__Output.TableRowUi(res,fname)
+                    SomethigOuput=True
                     if res[5]:
                         ThisSem += float(res[2])
                         cg += float(res[4]) * float(res[2])
 
                 self.__Output.TableSgpaUi(ThisSem,CurrentSemResult[0][5],fname)
                 credit+=ThisSem
-
-            self.__Output.CgpaUi(credit,cg,fname)
-
+            if SomethigOuput:
+                self.__Output.CgpaUi(credit, cg, fname)
             if not together:
                 self.__Output.CloseFile(fname)
             print("SuccessFully Added",i,"Results")
